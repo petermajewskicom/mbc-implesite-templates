@@ -19,7 +19,7 @@ Use an optional snippet footer_before to add cusom section/s
 to the footer, like a call to action or a form
 //-->
 {HTML:implepage_footer_before}
-<section class="implepage pad-t-md pad-b-md footer footer-{VAR1} footer-shadow-{VAR2}" style="position: relative;">    
+<section class="implepage pad-t-md pad-b-md footer footer-{SETUP:theme_footer:{VAR1}} footer-shadow-{SETUP:theme_footer_shadow:{VAR2}}" style="position: relative;">    
 	<div class="container">        
 		<div class="row">            
 			<div class="col-sm-4 col-md-2 col-lg-2 xs-pad-b-xs sm-pad-b-sm text-dark xs-text-center md-text-left">                
@@ -84,6 +84,7 @@ Use optional snippet footer_menu_special to add special elements to menu list li
 		</div>
 	</div>
 </section>
+{HTML:implepage_footer_after}
 <!-- 
 Use an optional snippet footer_after to add special elements/decorations after the footer, like a giant logo:
 
@@ -92,6 +93,6 @@ Use an optional snippet footer_after to add special elements/decorations after t
 		<img src="/custom/big_footer_logo.svg" style=" opacity:0.1; position:relative; bottom:0">
 	</div>
 </section>
-
 //-->
+
 {HTML:implepage_footer_after}
