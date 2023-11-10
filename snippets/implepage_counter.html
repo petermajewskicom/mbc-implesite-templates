@@ -1,0 +1,72 @@
+<!--
+Define page snippets:
+  - deadline_date YYYY/MM/DD HH:MM:SS
+  - deadline_timezone eg. Europe/London
+  - deadline_redirect url to redirect to after deadline
+//-->
+<script src="https://www.imple.com/lib/jquery/jquery.jCounter-0.1.4.js"></script>
+<script>
+const deadline = "{PAGE:_deadline_date}"; // YYYY/MM/DD HH:MM:SS
+
+$(window).on('load', function() {
+  if( $('.countdown').length ) {
+    $(".countdown").jCounter({
+        date: deadline, // Deadline date 
+        timezone: "{PAGE:_deadline_timezone}", // eg. Europe/London
+        format: "dd:hh:mm:ss",
+        twoDigits: 'on',
+        callback: function() { window.location.href = '{PAGE:_deadline_redirect}'; } // full URL
+    });
+  }
+});
+</script>
+<style>
+.countdown .timer {    display: inline-block;    margin-left: 25px;    margin-right: 25px;    font-size: 14px;    line-height: 18px;    font-weight: 400;}
+.countdown .timer > div {    font-size: 80px;    line-height: 84px;    font-weight: 700;}
+</style>
+	<div class="container"> 
+		<div class="row"> 
+			<div class="col-md-offset-1 col-md-10 text-center">  
+				<content class="undefined" id="">
+					
+					<div class="countdown pad-t-xxs pad-b-sm">                            
+						<content id="">
+							<div class="mar-t-sm  text-center">                                
+								<h5>
+                    {PAGE:_deadline_text:This page will disappear in:}
+								</h5>
+							</div>                        
+							<div class="timer">                                
+								<div class="days">00
+								</div>                                
+								<em xclass="textDays">
+									<content id="">{SETUP:translate_days:DAY/S}
+									</content></em>                             
+							</div>                            
+							<div class="timer">                                
+								<div class="hours">00
+								</div>                                
+								<em xclass="textHours">
+									<content id="">{SETUP:translate_hours:HOUR/S}
+									</content></em>                             
+							</div>                            
+							<div class="timer">                                
+								<div class="minutes">00
+								</div>                                
+								<em xclass="textMinutes">
+									<content id="">{SETUP:translate_min:MIN.}
+									</content></em>                             
+							</div>                            
+							<div class="timer">                                
+								<div class="seconds">00
+								</div>                                
+								<em xclass="textSeconds">
+									<content id="">{SETUP:translate_sec:SEC.}
+									</content></em>                             
+							</div>                            
+						</content>
+					</div>
+				</content> 
+			</div>
+		</div>
+	</div> 
