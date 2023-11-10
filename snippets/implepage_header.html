@@ -1,0 +1,23 @@
+<section class="implepage pad-t-0 pad-b-0 navbar navbar-{VAR1} navbar-shadow-{VAR2} navbar-static" style="position: relative;">  
+	<div class="container">
+		<div class="navbar-header">  
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>  
+			</button>  
+			<content id="">
+				<a class="navbar-brand" href="/"><img class="hover-zoom-1-1x" src="{SETUP:logo_header}"></a>
+			</content>
+		</div>
+		<div id="navbar1" class="collapse navbar-collapse sm-pull-right"> 
+			<content> 
+				<ul class="nav navbar-nav xs-columns-2">{MENU:implepage_header}
+          <!-- Use this to add special elements to the menu <li><li> //-->
+          {HTML:implepage_header_menu_special}
+				</ul>
+			</content>
+		</div>
+	</div>
+</section>
