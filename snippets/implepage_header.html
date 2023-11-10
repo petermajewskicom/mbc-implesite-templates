@@ -13,9 +13,13 @@
 		</div>
 		<div id="navbar1" class="collapse navbar-collapse sm-pull-right"> 
 			<content> 
-				<ul class="nav navbar-nav xs-columns-2">{MENU:implepage_header}
-          <!-- Use this to add special elements to the menu <li><li> //-->
-          {HTML:implepage_header_menu_special}
+				<ul class="nav navbar-nav xs-columns-2">
+					{MENU:implepage_header}
+<!-- 
+Use snippet implepage_header_menu_special to add special elements to menu list like:
+<li><a href="/login" type="button" class="btn btn-sm btn-primary btn-outline navbar-btn mar-r-xs fw-900 text-uppercase" target="">Sign in</a></li>
+//-->
+          				{HTML:implepage_header_menu_special}
 				</ul>
 			</content>
 		</div>
