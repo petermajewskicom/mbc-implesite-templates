@@ -18,7 +18,7 @@ to the footer even if a page template uses normal text editor
 Use an optional snippet footer_before to add cusom section/s
 to the footer, like a call to action or a form
 //-->
-{HTML:footer_before:{VAR1}|{VAR2}}
+{HTML:implepage_footer_before:{VAR1}|{VAR2}}
 <section class="implepage pad-t-md pad-b-md" style="background-color:#ffffff; position: relative;">
 </section>
 <section class="implepage pad-t-md pad-b-md footer footer-{VAR1} footer-shadow-{VAR2}" style="position: relative;">    
@@ -32,7 +32,7 @@ to the footer, like a call to action or a form
 			<div class="col-sm-8 col-md-5 col-lg-4 xs-pad-t-md xs-text-center sm-text-left">                
 				<content id="">
 					<ul class="footermenu xs-columns-1 sm-columns-2 md-columns-2 lg-columns-2">
-						{MENU:default_implepage_footer}
+						{MENU:github_implepage_footer}
 <!-- 
 Use optional snippet footer_menu_special to add special elements to menu list like:
 <li>
@@ -44,7 +44,7 @@ Use optional snippet footer_menu_special to add special elements to menu list li
     </form>
 </li>
 //-->
-						{HTML:footer_menu_special}
+						{HTML:implepage_footer_menu_special}
 					</ul>
 				</content>            
 			</div>            
@@ -96,4 +96,4 @@ Use an optional snippet footer_after to add special elements/decorations after t
 </section>
 
 //-->
-{HTML:footer_after:{VAR1}|{VAR2}}
+{HTML:implepage_footer_after:{VAR1}|{VAR2}}
