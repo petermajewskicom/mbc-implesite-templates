@@ -1,0 +1,89 @@
+<style>
+section.footer ul.footermenu li a {
+    background-color:#ffffff;
+    color:#333333 !important;
+}
+section.footer ul.footermenu li a:hover,
+section.footer ul.footermenu li a:active {
+    background-color:{SETUP:theme_primary_color:#337ab7};
+    color:{SETUP:theme_primary_color_text:#ffffff} !important;
+}
+</style>
+<section class="implepage pad-t-md pad-b-md" style="background-color:#ffffff; position: relative;">
+</section>
+<section class="implepage pad-t-md pad-b-md footer footer-{VAR1} footer-shadow-{VAR2}" style="position: relative;">    
+	<div class="container">        
+		<div class="row">            
+			<div class="col-sm-4 col-md-2 col-lg-2 xs-pad-b-xs sm-pad-b-sm text-dark xs-text-center md-text-left">                
+				<content id="">
+					{HTML:footer_brand}
+				</content> 
+			</div> 
+			<div class="col-sm-8 col-md-5 col-lg-4 xs-pad-t-md xs-text-center sm-text-left">                
+				<content id="">
+					<ul class="footermenu xs-columns-1 sm-columns-2 md-columns-2 lg-columns-2">
+						{MENU:default_implepage_footer}
+<!-- 
+Use optional snippet footer_menu_special to add special elements to menu list like:
+<li>
+    <form action="/contact" method="get">
+        <button class="btn btn-danger shadow-default hover-zoom-1-1x"
+            <i class="fa fa-calendar"></i>
+            <span> Schedule a call</span>
+        </button>
+    </form>
+</li>
+//-->
+						{HTML:footer_menu_special}
+					</ul>
+				</content>            
+			</div>            
+
+			<div class="col-sm-12 col-md-5 col-lg-6 xs-pad-x-md xs-pad-t-md sm-pad-t-sm md-pad-t-0 xs-text-center sm-text-left">                
+				<content id="">
+					<h6 class="text-black mar-t-0 xs-mar-t-xs">{SETUP:sitename}
+					</h6>
+				</content>                
+				<content id="">
+					<p class="text-muted">
+						<small>{SETUP:tagline}</small>
+					</p>
+				</content>   
+			</div>      
+			
+		</div>  
+		<div class="row"> 
+            <div class="col-sm-12 xs-pad-t-sm sm-pad-t-sm">
+    			<ul class="legalnotes text-center">
+				<content id="">
+					<li>
+						<small>
+							<a href="{URL:7}" target="" class="text-muted" title="{SETUP:translate_copyrights}">{SETUP:translate_copyrights:Copyrights}
+							</a> © 
+							<a href="{URL:6}" target="" class="text-muted" title="{SETUP:company_name}">{SETUP:company_name}
+							</a></small>
+					</li>
+				</content>                
+				<content id="">
+					<li>
+						<small>
+							<a href="{URL:9}" target="" class="text-muted" title="{SETUP:translate_privacy_policy:Privacy Policy}">{SETUP:translate_privacy_policy:Privacy Policy}
+							</a></small>
+					</li>
+				</content> 
+				</ul>
+            </div>		
+		</div>
+	</div>
+</section>
+<!-- 
+Use optional snippet footer_after to add special elements/decorations after the footer, like a giant logo:
+
+<section class="implepage pad-t-0 pad-b-0 footer footer-{VAR1}" style="position: relative; z-index:2">
+	<div class="container pad-t-0" style="position:relative">
+		<img src="/custom/big_footer_logo.svg" style=" opacity:0.1; position:relative; bottom:0">
+	</div>
+</section>
+
+//-->
+{HTML:footer_after}
