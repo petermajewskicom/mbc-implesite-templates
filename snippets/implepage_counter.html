@@ -3,6 +3,7 @@ Define page snippets:
   - deadline_date YYYY/MM/DD HH:MM:SS
   - deadline_timezone eg. Europe/London
   - deadline_redirect url to redirect to after deadline
+  - deadline_text additional text
 //-->
 <script src="https://www.imple.com/lib/jquery/jquery.jCounter-0.1.4.js"></script>
 <script>
@@ -33,7 +34,7 @@ $(window).on('load', function() {
 						<content id="">
 							<div class="mar-t-sm  text-center">                                
 								<h5>
-                    {PAGE:_deadline_text:This page will disappear in:}
+                    							{PAGE:_deadline_text}
 								</h5>
 							</div>                        
 							<div class="timer">                                
