@@ -1,6 +1,5 @@
 {HTML:github_implepage_header:default|default}
 {HTML:github_implepage_breadcrumbs}
-
 <!-- 
 page using this template should have defined unique page snippets: 
 
@@ -8,32 +7,6 @@ page using this template should have defined unique page snippets:
       - comment_link with a instagram post
 
 //-->
-<section style="background-color: rgb(255, 255, 255); position: relative;" class="implepage pad-t-md pad-b-md"> 
-	<div class="container"> 
-		<div class="row"> 
-			<div class="col-sm-offset-4 col-sm-4 text-center"> 
-				<a class="" href="{PAGE:author_website}" target="_blank">
-					<img src="{PAGE:author_picture}" class="img-circle img-responsive center-block" style="max-width:75px"> 
-				</a> 
-				<content id=""> 
-					<h5>
-						<div class="text-light uppercase pad-t-xxs" style="letter-spacing:0.2em">
-							<small>{PAGE:author_firstname} {PAGE:author_lastname}</small>
-						</div> 
-					</h5> 
-				</content> 
-			</div> 
-		</div> 
-	</div> 
-</section>
-<section style="background-color: rgb(255, 255, 255); position: relative;" class="implepage pad-t-0 pad-b-0"> 
-	<div class="container"> 
-		<div class="row"> 
-			<div class="col-md-offset-1 col-md-10">  
-			</div> 
-		</div> 
-	</div> 
-</section>
 <section class="implepage pad-t-0 pad-b-0" style="background-color: rgb(255, 255, 255); position: relative;"> 
 	<div class="container"> 
 		<div class="row"> 
@@ -74,10 +47,28 @@ page using this template should have defined unique page snippets:
 				<content id=""> 
 					{CONTENT:} 
 				</content>     
+
+				<content id=""> 
+					<div class="mar-t-sm row">
+					    <div class="col-xs-2">
+					       <a class="mar-r-sm mar-b-sm" href="{PAGE:author_website}" target="_blank">
+					            <img src="{PAGE:author_picture}" class="img-circle img-responsive center-block" style="max-width:50px"> 
+				            </a>
+				        </div>
+					    <div class="col-xs-10">
+					       <a class="text-light uppercase" href="{PAGE:author_website}" target="_blank">
+					           <small>{PAGE:author_firstname} {PAGE:author_lastname}</small>
+					       </a>
+					        <div class="text-muted fw-300">
+					           <small>{PAGE:author_bio}</small>
+					       </div>
+					    </div>
+					</div>
+				</content> 
+
 			</div> 
 		</div> 
 	</div> 
 </section>
-
 {HTML:github_implepage_footer:default|default}
 {HTML:js_bottom}
