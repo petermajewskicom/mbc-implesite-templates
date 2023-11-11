@@ -2,7 +2,7 @@
 all pages listed by the menu should:
   - have defined unique page snippet: 
       - image with an url to an image representing this page
-      - comment_link with an url to a place where one can comment
+      - comments with an url to a place where one can comment
         you can also replace PAGE:_comment_link with something like
         {URL:{PAGE:aid}}#comments
         if you have installed comments from services like Disqus on a particular page.
@@ -26,7 +26,7 @@ It should use {PAGE:subpages} flag to get number of all posts.
 							<a href="https://{PAGE:domain}/{PAGE:aid}" target="_blank" class="">
 								<i class="fa fa-share-alt mar-xxs editing-fa"></i> {PAGE:domain}/{PAGE:aid}
 							</a></small></div><div class="col-xs-6 col-sm-12 col-md-6 text-right xs-text-right sm-text-left md-text-right"><small>
-							<a href="{PAGE:_comment_link}" target="_blank" class="">
+							<a href="{PAGE:_comments}" target="_blank" class="">
 								<i class="fa fa-instagram mar-xxs editing-fa"></i> {SETUP:translate_comment:Comment}<span class="hidden-xs hidden-sm"> {SETUP:translate_on_instagram:on Instagram}</span>
 							</a></small></div>
 					</div> 
