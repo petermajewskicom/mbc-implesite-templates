@@ -3,8 +3,11 @@
 <!-- 
 page using this template should have defined unique page snippets: 
 
-      - image with an url to an image representing this page
+      - image with an url to an image preview for menu representing this page
       - comment_link with a instagram post
+      - video_embed - code of video embed like {VIMEO:ID:9:16} or downloaded from video hosting site
+      - optional_gif_preview - url to a gif file ending at .gif for preview in menu
+      - optional_video_preview - url to a video file .mp4 or .ogg or from vimeo. URL has to contain .mp4/.ogg anywhere
 
 //-->
 <section class="implepage pad-t-0 pad-b-0" style="background-color: rgb(255, 255, 255); position: relative;"> 
@@ -23,7 +26,7 @@ page using this template should have defined unique page snippets:
 	<div class="container display-table"> 
 		<div class="row table-row"> 
 			<div class="col-sm-6 col-md-6 pad-t-sm text-center xs-pad-b-md"> 
-				<div class="video ratio-9x16 radius-5 shadow-default">{PAGE:_video}</div>
+				<div class="video ratio-9x16 radius-5 shadow-default">{PAGE:_video_embed}</div>
 				<content id=""> 
 
 					<div class="row text-light fw-300"> 
@@ -32,7 +35,7 @@ page using this template should have defined unique page snippets:
 								<i class="fa fa-share-alt mar-xxs editing-fa"></i> {PAGE:domain}/{PAGE:aid}
 							</a></small></div><div class="col-xs-6 col-sm-12 col-md-6 text-right xs-text-right sm-text-left md-text-right"><small>
 							<a href="{PAGE:_comments}" target="_blank" class="">
-								<i class="fa fa-instagram mar-xxs editing-fa"></i> {SETUP:translate_comment:Comment}<span class="hidden-xs hidden-sm"> {SETUP:translate_on_instagram:on Instagram}</span>
+								<i class="fa fa-instagram mar-xxs editing-fa"></i> {SETUP:translate_comment:Comment}<span class="hidden-xs hidden-sm"> {SETUP:translate_on_tiktok:on TikTok}</span>
 							</a></small></div>
 					</div> 
 					
