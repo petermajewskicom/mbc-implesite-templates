@@ -1,6 +1,7 @@
 {HTML:github_implepage_header:default|default}
 {HTML:github_implepage_breadcrumbs}
 
+<!-- // Uncomment to enable author picture above the headline
 <section class="implepage pad-t-md pad-b-md"> 
 	<div class="container"> 
 		<div class="row"> 
@@ -19,6 +20,8 @@
 		</div> 
 	</div> 
 </section>
+//-->
+
 <section class="implepage pad-t-0 pad-b-0"> 
 	<div class="container"> 
 		<div class="row"> 
@@ -69,6 +72,31 @@
 </section>
 
 {CONTENT:}
+
+<section class="implepage pad-t-sm pad-b-sm" style="background-color: rgb(255, 255, 255); position: relative;">
+	<div class="container">    
+		<div class="row">
+			<div class="col-md-offset1 col-md-10 col-lg-offset-2 col-lg-8">
+				<div class="row">    
+					<div class="col-xs-2 col-md-1 col-lg-2 pad-t-xxs">       
+						<a class="mar-r-sm mar-b-sm text-right pad-r-xs" href="{PAGE:author_website}" target="_blank">            
+							<img src="{PAGE:author_picture}" class="img-circle img-responsive center-block" style="max-width:70px">             
+						</a>        
+					</div>    
+					<div class="col-xs-8">       
+						<a class="text-light uppercase" href="{PAGE:author_website}" target="_blank">           
+							<small>{SETUP:translate_author:Author}: 
+								<b>{PAGE:author_firstname} {PAGE:author_lastname}</b></small>       
+						</a>        
+						<div class="text-muted fw-300">           
+							<small>{PAGE:author_bio}</small>       
+						</div>    
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 {HTML:github_implepage_footer:default|default}
 
