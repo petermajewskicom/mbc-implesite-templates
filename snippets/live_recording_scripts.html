@@ -1,21 +1,24 @@
-<script src="/custom/js/plugins/jquery.jCounter-0.1.4.js"></script>
+<!--
+Define page snippets:
+  - deadline_date YYYY/MM/DD HH:MM:SS
+  - deadline_timezone eg. Europe/London
+  - deadline_redirect url to redirect to after deadline
+  - deadline_text additional text
+//-->
+<script src="https://www.imple.com/lib/jquery/jquery.jCounter-0.1.4.js"></script>
 <script>
-var webinardeadline = "{PAGE:_deadline_date}";
-// var showoffer = new Date(Date.parse(nextwebinardate)+(60*60000));
+const deadline = "{PAGE:_deadline_date}"; // YYYY/MM/DD HH:MM:SS
 
 $(window).on('load', function() {
-    
-$('#webinaralternative').hide();
-
-if( $('.countdown').length ) {
+  $('#webinaralternative').hide();
+  if( $('.countdown').length ) {
     $(".countdown").jCounter({
-        date: webinardeadline, // Deadline date 
-        timezone: "{PAGE:_timezone}",
+        date: deadline, // Deadline date 
+        timezone: "{PAGE:_deadline_timezone}", // eg. Europe/London
         format: "dd:hh:mm:ss",
         twoDigits: 'on',
-        callback: function() { window.location.href = '{PAGE:_deadline_redirect}'; }
+        callback: function() { window.location.href = '{PAGE:_deadline_redirect}'; } // full URL
     });
-}
-
+  }
 });
 </script>
