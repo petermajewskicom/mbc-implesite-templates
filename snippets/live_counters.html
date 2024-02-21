@@ -34,7 +34,7 @@ $(window).on('load', function() {
   
   if( $('.video').length ) {
       $(".video").jCounter({
-          date: new Date(Date.parse(nextWebinarDate)-(showVideoBefore*60*1000)), // Deadline date 
+          date: new Date(Date.parse(nextWebinarDate)-(showVideoBefore*60*1000)), // before deadline date 
           timezone: "Europe/Warsaw",
           format: "dd:hh:mm:ss",
           twoDigits: 'on',
@@ -44,7 +44,7 @@ $(window).on('load', function() {
   
   if( $('.promobutton').length ) {
       $(".promobutton").jCounter({
-          date: new Date(Date.parse(nextWebinarDate)+(showBtnAfter*60*1000)), // Deadline date 
+          date: new Date(Date.parse(nextWebinarDate)+(showBtnAfter*60*1000)), // after deadline date 
           timezone: "Europe/Warsaw",
           format: "dd:hh:mm:ss",
           twoDigits: 'on',
@@ -54,7 +54,7 @@ $(window).on('load', function() {
   
   if( $('.chat').length ) {
       $(".chat").jCounter({
-          date: new Date(Date.parse(nextWebinarDate)-(hideChatAfter*60*1000)), // Deadline date 
+          date: new Date(Date.parse(nextWebinarDate)+(hideChatAfter*60*1000)), // after deadline date 
           timezone: "Europe/Warsaw",
           format: "dd:hh:mm:ss",
           twoDigits: 'on',
