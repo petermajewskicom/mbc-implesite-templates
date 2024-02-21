@@ -1,0 +1,58 @@
+<script src="https://www.imple.com/lib/jquery/jquery.jCounter-0.1.4.js"></script>
+<script>
+function ShowWebinar() {
+    // reload vimeo video
+   $(".vimeo iframe").attr('src', $(".vimeo iframe").attr('src'));
+   $(".video").show();
+   $(".chat").show();
+}
+
+$(window).on('load', function() {
+
+  if(window.location.hash == '#showwebinar') {
+      ShowWebinar();
+      $(".promobutton").show();
+  }
+  
+  if( $('.countdown').length ) {
+      $(".countdown").jCounter({
+          date: nextWebinarDate, // Deadline date 
+          timezone: "Europe/Warsaw",
+          format: "dd:hh:mm:ss",
+          twoDigits: 'on',
+          callback: function() { $(".countdown").hide(); }
+      });
+  }
+  
+  if( $('.video').length ) {
+      $(".video").jCounter({
+          date: new Date(Date.parse(nextWebinarDate)-(showVideoBefore*60*1000)), // Deadline date 
+          timezone: "Europe/Warsaw",
+          format: "dd:hh:mm:ss",
+          twoDigits: 'on',
+          callback: function() { ShowWebinar(); }
+      });
+  }
+  
+  if( $('.promobutton').length ) {
+      $(".promobutton").jCounter({
+          date: new Date(Date.parse(nextWebinarDate)+(showBtnAfter*60*1000)), // Deadline date 
+          timezone: "Europe/Warsaw",
+          format: "dd:hh:mm:ss",
+          twoDigits: 'on',
+          callback: function() { $(".promobutton").show(); }
+      });
+  }
+  
+  if( $('.chat').length ) {
+      $(".chat").jCounter({
+          date: new Date(Date.parse(nextWebinarDate)-(hideChatAfter*60*1000)), // Deadline date 
+          timezone: "Europe/Warsaw",
+          format: "dd:hh:mm:ss",
+          twoDigits: 'on',
+          callback: function() { $(".chat").hide(); }
+      });
+  }
+
+});
+</script>
