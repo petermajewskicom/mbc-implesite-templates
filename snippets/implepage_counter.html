@@ -1,26 +1,3 @@
-<!--
-Define page snippets:
-  - deadline_date YYYY/MM/DD HH:MM:SS
-  - deadline_timezone eg. Europe/London
-  - deadline_redirect url to redirect to after deadline
-  - deadline_text additional text
-//-->
-<script src="https://www.imple.com/lib/jquery/jquery.jCounter-0.1.4.js"></script>
-<script>
-const deadline = "{PAGE:_deadline_date}"; // YYYY/MM/DD HH:MM:SS
-
-$(window).on('load', function() {
-  if( $('.countdown').length ) {
-    $(".countdown").jCounter({
-        date: deadline, // Deadline date 
-        timezone: "{PAGE:_deadline_timezone}", // eg. Europe/London
-        format: "dd:hh:mm:ss",
-        twoDigits: 'on',
-        callback: function() { window.location.href = '{PAGE:_deadline_redirect}'; } // full URL
-    });
-  }
-});
-</script>
 <style>
 .countdown .timer {    display: inline-block;    margin-left: 25px;    margin-right: 25px;    font-size: 14px;    line-height: 18px;    font-weight: 400;}
 .countdown .timer > div {    font-size: 80px;    line-height: 84px;    font-weight: 700;}
