@@ -1,28 +1,45 @@
-<section class="implepage pad-t-0 pad-b-0 navbar navbar-{VAR1} navbar-shadow-{VAR2} navbar-{VAR3}">  
-	<div class="container">
-		<div class="navbar-header">  
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" aria-expanded="false" aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>  
-			</button>  
-			<content id="">
-				<a title="{SETUP:sitename}" class="navbar-brand" href="/"><img alt="{SETUP:sitename}" class="hover-zoom-1-1x" style="height:30px;" src="{SETUP:logo_header_{VAR1}:/custom/logo_header.png}"></a>
-			</content>
-		</div>
-		<div id="navbar1" class="collapse navbar-collapse sm-pull-right"> 
-			<content> 
-				<ul class="nav navbar-nav xs-columns-2 sm-columns-4 md-columns-1">
-					{MENU:github_implepage_header:{VAR4}}
+<section class="implepage pad-t-xs pad-b-xs navbar navbar-{VAR1} navbar-shadow-{VAR2} navbar-{VAR3}">    
+	<div class="container">        
+		<div class="row">            
+			<div class="col-sm-12">
+				<button type="button" class="pull-right btn btn-sm btn-default pad-x-xs mar-l-xs  hover-zoom-1-1x collapsed" data-toggle="collapse" data-target="#navmenu" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<i class="fa fa-bars editing-fa"></i>
+				</button>
 <!-- 
 Use snippet implepage_header_menu_special to add special elements to menu list like:
-<li><a href="/login" type="button" class="btn btn-sm btn-primary btn-outline navbar-btn mar-r-xs fw-900 text-uppercase" target="">Sign in</a></li>
+<a href="/login" type="button" class="btn btn-sm btn-primary btn-outline navbar-btn mar-r-xs fw-900 text-uppercase pull-right" target="">Sign in</a>
 //-->
-          				{HTML:implepage_header_menu_special:{VAR1}|{VAR2}|{VAR3}}
-				</ul>
-			</content>
-		</div>
+				{HTML:implepage_header_menu_special:{VAR1}|{VAR2}|{VAR3}}
+				<content id="">
+					<a title="{SETUP:sitename}" class="navbar-brand" href="/"><img alt="{SETUP:sitename}" class="hover-zoom-1-1x" style="height:30px;" src="{SETUP:logo_header_{VAR1}:/custom/logo_header.png}"></a>
+				</content>     
+			</div>            
+		</div>   
+		<div class="row mar-t-sm collapse" id="navmenu" aria-expanded="false">            
+			<div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 xs-pad-b-xs sm-pad-b-sm text-dark -text-left">                
+				<a title="{SETUP:sitename}" href="/"><img class="img-responsive mar-t-0 radius-5 shadow-default mar-t-xs hover-zoom-1-1x" src="{SETUP:logo_footer:/custom/logo_footer.png}" style="width:150px;" alt="{SETUP:sitename}"></a>
+			</div> 
+			<div class="col-xs-7 col-sm-8 col-md-4 xs-pad-t-0 xs-pad-b-sm">                               
+				<content>
+					<ul class="pad-l-sm">
+						<small>                    
+							{MENU:github_implepage_header:{VAR4}}
+						</small>
+					</ul>
+				</content>            
+			</div>            
+			<div class="col-xs-12 col-sm-12 col-md-6 xs-pad-t-0 xs-pad-b-sm">                
+				<content>
+					<h4 class="text-black">{SETUP:sitename}
+					</h4>
+				</content>                
+				<content>
+					<p class="text-muted">{SETUP:tagline}
+					</p>
+				</content>                
+			</div>        
+		</div>  
 	</div>
 </section>
 <!-- 
