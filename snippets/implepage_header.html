@@ -11,9 +11,7 @@ Use snippet implepage_header_menu_special to add special elements to menu list l
 <a href="/login" type="button" class="btn btn-sm btn-primary btn-outline navbar-btn mar-r-xs fw-900 text-uppercase pull-right" target="">Sign in</a>
 //-->
 				{HTML:implepage_header_menu_special:{VAR1}|{VAR2}|{VAR3}}
-				<content id="">
-					<a title="{SETUP:sitename}" href="/"><img alt="{SETUP:sitename}" class="hover-zoom-1-1x" style="height:30px;" src="{SETUP:logo_header_{VAR1}:/custom/logo_header.png}"></a>
-				</content>     
+				<a title="{SETUP:sitename}" href="{PAGE:host}"><img alt="{SETUP:sitename}" class="hover-zoom-1-1x" style="height:30px;" src="{SETUP:logo_header_{VAR1}:/custom/logo_header.png}"></a>    
 			</div>            
 		</div>   
 		<div class="row pad-y-sm collapse no-print" id="navmenu" aria-expanded="false">            
