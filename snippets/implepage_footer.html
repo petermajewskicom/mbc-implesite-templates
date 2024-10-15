@@ -24,7 +24,7 @@ to the footer, like a call to action or a form
 		<div class="row">            
 			<div class="col-sm-3 col-md-2 col-lg-2 xs-pad-b-xs sm-pad-b-sm text-dark xs-text-center md-text-left">                
 				<content id="">
-					<a title="{SETUP:sitename}" href="/"><img class="hover-zoom-1-1x img-responsive radius-5 shadow-default center-block mar-t-xs" src="{SETUP:logo_footer:/custom/logo_footer.png}" style="width:150px;" alt="{SETUP:sitename}"></a>
+					<a title="{SETUP:sitename}" href="{PAGE:host}"><img class="hover-zoom-1-1x img-responsive radius-5 shadow-default center-block mar-t-xs" src="{SETUP:logo_footer:/custom/logo_footer.png}" style="width:150px;" alt="{SETUP:sitename}"></a>
 				</content> 
 			</div> 
 			<div class="col-sm-9 col-md-5 col-lg-4 xs-pad-t-md xs-text-center sm-text-left no-print">                
@@ -66,16 +66,16 @@ Use optional snippet footer_menu_special to add special elements to menu list li
 				<content id="">
 					<li>
 						<small>
-							<a href="{SETUP:link_copyrights:/copyrights}" target="" class="text-muted" title="{SETUP:translate_copyrights}">{SETUP:translate_copyrights:Copyrights}
+							<a href="{PAGE:host}{SETUP:link_copyrights:/copyrights}" target="" class="text-muted" title="{SETUP:translate_copyrights}">{SETUP:translate_copyrights:Copyrights}
 							</a> © 
-							<a href="{SETUP:link_about:/about}" target="" class="text-muted" title="{SETUP:company_name}">{SETUP:company_name}
+							<a href="{PAGE:host}{SETUP:link_about:/about}" target="" class="text-muted" title="{SETUP:company_name}">{SETUP:company_name}
 							</a></small>
 					</li>
 				</content>                
 				<content id="">
 					<li>
 						<small>
-							<a href="{SETUP:link_privacy:/privacy}" target="" class="text-muted" title="{SETUP:translate_privacy_policy:Privacy Policy}">{SETUP:translate_privacy_policy:Privacy Policy}
+							<a href="{PAGE:host}{SETUP:link_privacy:/privacy}" target="" class="text-muted" title="{SETUP:translate_privacy_policy:Privacy Policy}">{SETUP:translate_privacy_policy:Privacy Policy}
 							</a></small>
 					</li>
 				</content> 
